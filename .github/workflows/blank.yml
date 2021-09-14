@@ -27,6 +27,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        with: # Set the secret as an input
-          my_secret: ${{ secrets.my_secret }}
-          run: echo Hello, "$my_secret"!
+        env: # Set the secret as an input
+          MY_SECRET: ${{ secrets.my_secret }}
+        run: echo Hello, "$MY_SECRET"!
